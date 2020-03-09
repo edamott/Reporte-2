@@ -60,9 +60,11 @@ tiempo:
 iloop: movlw d'61' 
 	movwf j
 		
-jloop: movlw d'130' 
-       movwf k
-       
+jloop: movlw d'128' 
+	NOP
+	NOP
+	movwf k
+	   
 kloop: decfsz k, f
 	goto kloop
 	decfsz j, f
